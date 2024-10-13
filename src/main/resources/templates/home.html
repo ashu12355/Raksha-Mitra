@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title th:text="${title}">RakshaMitra</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{/css/headerfooter.css}">
+
+</head>
+
+<body>
+
+    <!-- Header Section Starts Here -->
+    <div th:replace="~{fragments/header :: headerFragment}"></div>
+
+    <!--  Header Section Ends Here -->
+
+    <!-- Main Section Starts Here  -->
+
+    <div th:replace="~{fragments/main :: mainFragment}"></div>
+
+    <!-- Main Section Ends Here  -->
+
+    <!-- About Us Section Starts Here  -->
+    <section class="about full_width">
+        <div class="about_section content_width">
+            <div class="box3"></div>
+            <div class="box3"></div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section Ends Here  -->
+
+    <div th:replace="~{fragments/footer :: footerFragment}"></div>
+
+    <!-- Footer1 Section Ends Here  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/res_nav.js"></script>
+
+</body>
+
+</html>
