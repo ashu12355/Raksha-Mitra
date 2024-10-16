@@ -36,38 +36,47 @@
 
     <!-- Header Part Ends Here  -->
 
-<!-- Rescue Agency Login Starts Here  -->
+    <!-- Rescue Agency Login Starts Here  -->
 
-<section class="rescue_logform full_width">
-    <div class="rescue_login_head"> 
-        <h1>Rescue Agency Login</h1>
+    <section class="rescue_logform full_width">
+        <div class="rescue_login_head">
+            <h1>Rescue Agency Login</h1>
 
-    </div>
-    <div class="rescue_logform_container content_width">
-        <div class="rescue_l_logo box12">
-           <img th:src="@{/images/Login_Rescue_Agency.png}" alt="">
         </div>
-        <div class="rescue_l_form box12">
-            <div class="ll"> 
-                <img th:src="@{/images/l_logo.png}" alt=""></div>
-           
-            <form method="">
-         <label for="">Enter Your Email</label>
-         <input type="email" id="email" name="email" placeholder="Email*" required autocomplete="off"> <br>
-         <label for="">Enter Your Password</label>
-         <input type="text" id="phone" name="phone" placeholder="Password*" required autocomplete="off"> <br>
-                 
-                 <a href=""><h3>Forgot Password?</h3></a>
-                <button type="submit">Login</button>
-                <button type="reset">Reset</button><br>
-                <a th:href="@{/rescueagency/register}"><h3 class="naccount">New? Create an Account</h3></a>
-                
-            </form>
-        </div>
-    </div>
-</section>
+        <div class="rescue_logform_container content_width">
+            <div class="rescue_l_logo box12">
+                <img th:src="@{/images/Login_Rescue_Agency.png}" alt="">
+            </div>
+            <div class="rescue_l_form box12">
+                <div class="ll">
+                    <img th:src="@{/images/l_logo.png}" alt="">
+                </div>
 
-<!-- Rescue Agency Login Ends Here  -->
+                <form method="post" action="/rescueagency/login">
+                    <label for="">Enter Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email*" required autocomplete="off"> <br>
+                    <label for="">Enter Your Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password*" required
+                        autocomplete="off"> <br>
+
+                    <a href="">
+                        <h3>Forgot Password?</h3>
+                    </a>
+                    <button type="submit">Login</button>
+                    <button type="reset">Reset</button><br>
+                    <a th:href="@{/rescueagency/register}">
+                        <h3 class="naccount">New? Create an Account</h3>
+                    </a>
+                </form>
+                <!-- Display error message if it exists -->
+                <div th:if="${error}" class="error-message" style="color:red;">
+                    <p th:text="${error}"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rescue Agency Login Ends Here  -->
 
 
     <!-- Footer Section Starts Here  -->

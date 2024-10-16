@@ -29,11 +29,6 @@
 
 <body>
 
-    <!-- Header Part Starts Here  -->
-
-
-    <!-- Header Part Ends Here  -->
-
     <div th:replace="~{fragments/header :: headerFragment}"></div>
 
     <!-- Rescue Agency Registration Starts Here  -->
@@ -51,64 +46,63 @@
 
             <div class="rescue_reg_form box14">
 
-                <form action="">
-
+                <form action="/rescueagency/register" method="post">
                     <div class="rescue_innerform">
                         <label for="">Agency Name</label>
-                        <input type="text" placeholder="Enter Your Agency Name*" required>
-
+                        <input type="text" name="agencyName" placeholder="Enter Your Agency Name*" required>
+                
                         <label for="">Contact Person Name</label>
-                        <input type="text" placeholder="Enter the Contact Person Name*" required>
-
+                        <input type="text" name="contactPersonName" placeholder="Enter the Contact Person Name*" required>
+                
                         <label for="">Contact Number</label>
-                        <input type="text" placeholder="Enter Contact Number*" required>
-
+                        <input type="text" name="contactNumber" placeholder="Enter Contact Number*" required>
+                
                         <label for="">Email Address</label>
-                        <input type="email" placeholder="Enter Email Address*" required>
-
+                        <input type="email" name="email" placeholder="Enter Email Address*" required>
+                
                         <label for="">Agency Location</label>
-                        <input type="text" placeholder="Enter The Agency Location (Latitude)*" required>
-                        <input type="text" placeholder="Enter The Agency Location (Longitude)*" required>
+                        <input type="text" name="agencyLocation" placeholder="Enter The Agency Location*" required>
+                        <input type="text" name="latitude" placeholder="Enter The Agency Latitude*" required>
+                        <input type="text" name="longitude" placeholder="Enter The Agency Longitude*" required>
                     </div>
-
-                    <div  class="rescue_innerform">
+                
+                    <div class="rescue_innerform">
                         <label for="">Specialization</label>
-                        <select name="" id="" required>
+                        <select name="specialization" required>
                             <option value="">Select Specialization*</option>
-                            <option value="">Search and Rescue</option>
-                            <option value="">Medical Aid</option>
-                            <option value="">Firefighting</option>
-                            <option value="">Logistics</option>
-                            <option value="">Others</option>
+                            <option value="Search and Rescue">Search and Rescue</option>
+                            <option value="Medical Aid">Medical Aid</option>
+                            <option value="Firefighting">Firefighting</option>
+                            <option value="Logistics">Logistics</option>
+                            <option value="Others">Others</option>
                         </select>
-
+                
                         <label for="">Team Size</label>
-                        <input type="text" placeholder="Enter The Team Size*" required>
-
+                        <input type="number" name="teamSize" placeholder="Enter The Team Size*" required>
+                
                         <label for="">Availability</label>
-                        <select name="" id="" required>
+                        <select name="availability" required>
                             <option value="">Select Availability*</option>
-                            <option value="">Yes</option>
-                            <option value="">Already Assigned</option>
+                            <option value="Yes">Yes</option>
+                            <option value="Already Assigned">Already Assigned</option>
                         </select>
-
+                
                         <label for="">Password</label>
-                        <input type="password" placeholder="Create A Password*" required>
-                        
+                        <input type="password" name="password" placeholder="Create A Password*" required>
+                
                         <label for="">Confirm Password</label>
-                        <input type="password" placeholder="Re-Enter The Password*" required>
+                        <input type="password" name="confirmPassword" placeholder="Re-Enter The Password*" required>
                     </div>
-
+                
                     <div class="rescue_innerform">
                         <label for="">Description</label>
-                        <textarea name="" id="" rows="10" placeholder="Additional information or special requirements and Past Experience*"></textarea>
-    
+                        <textarea name="description" rows="10" placeholder="Additional information or special requirements and Past Experience*"></textarea>
+                
                         <input type="submit" class="btn">
-                        <input type="Reset" class="btn">
-
+                        <input type="reset" class="btn">
                     </div>
-
                 </form>
+                
             </div> 
         </div>
     </section>

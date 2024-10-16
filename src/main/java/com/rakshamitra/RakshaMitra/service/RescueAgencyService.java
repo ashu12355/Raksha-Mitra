@@ -1,5 +1,7 @@
 package com.rakshamitra.RakshaMitra.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +19,21 @@ public class RescueAgencyService {
     }
 
     public RescueAgency saveAgency(RescueAgency agency) {
+        if (rescueAgencyRepository.findByEmail(agency.getEmail()) != null) {
+            throw new IllegalArgumentException("Email already in use");
+        }
         return rescueAgencyRepository.save(agency);
+    }
+
+    public void approveAgency(Long id) {
+        RescueAgency agency = rescueAgencyRepository.findById(id).orElse(null);
+        if (agency != null) {
+            agency.setApproved(true);
+            rescueAgencyRepository.save(agency);
+        }
+    }
+    public List<RescueAgency> findAllPendingAgencies() {
+        return rescueAgencyRepository.findByApproved(false);
     }
     
 }
