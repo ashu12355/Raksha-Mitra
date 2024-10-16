@@ -11,7 +11,7 @@ public class AdminController {
     public String showAdminLoginPage() {
         return "admin_login"; // Show login page
     }
-    @GetMapping("/admin_dashboard")
+    @GetMapping("/admin/admin_dashboard")
     public String showAdminDashboard() {
         return "admin_dashboard";  // Admin dashboard page
     }

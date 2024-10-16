@@ -25,7 +25,7 @@ public class AdminService implements UserDetailsService {
 
         return org.springframework.security.core.userdetails.User.builder()
                 .username(admin.getEmail())
-                .password(admin.getPassword())  // Ensure the password is encoded
+                .password(admin.getPassword())
                 .roles("ADMIN")
                 .build();
     }
