@@ -40,11 +40,12 @@
         </div>
 
         <div class="menu box1">
-            <nav class="nav ">
+            <nav class="nav">
                 <ul id="menulist">
                     <li><a th:href="@{/}">Home</a></li>
-                    <li><a href="#about_us">About</a></li>
-                    <li><a href="#contact_us">Contact</a></li>
+                    <!-- Update these links -->
+                    <li><a href="#about_us" class="scroll-link">About</a></li>
+                    <li><a href="#contact_us" class="scroll-link">Contact</a></li>
                     <li><a href="#">Notice</a></li>
                     <li><a th:href="@{/ghash}">Generate Hashtag</a></li>
                     <li><a th:href="@{/login}">Login</a></li>
@@ -52,6 +53,7 @@
                 </ul>
             </nav>
         </div>
+        
 
         <div class="mob_menu " onclick="toggleMenu()">
             <i class="fa-solid fa-bars"></i>
@@ -61,6 +63,7 @@
     </div>
 </header>
 <!-- Header Part Ends Here  -->
+
 
 </body>
 </html>

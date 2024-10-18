@@ -26,55 +26,12 @@
 
 <body>
 
-    <!-- Header Part Starts Here  -->
 
-    <header class="header1 full_width">
-        <div class="container content_width">
-            <p><span>RakshaMitra:</span> Instant Alerts, Immediate Action.</p>
-            <div class="header_social">
-                <a href="" target="_blank" aria-label="LinkedIn">
-                    <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
-                </a>
-                <a href="" target="_blank" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
-                </a>
-                <a href="" target="_blank" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
-                </a>
-                <a href="" target="_blank" aria-label="YouTube">
-                    <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
-                </a>
-            </div>
-        </div>
-    </header>
+  
+    <!-- Header Section Starts Here -->
+    <div th:replace="~{fragments/header :: headerFragment}"></div>
 
-    <header class="header2 full_width">
-        <div class="container content_width">
-            <div class="logo box1">
-                <img th:src="@{/images/Logo_Main.png}" alt="" class="bl_logo">
-            </div>
-
-            <div class="menu box1">
-                <nav class="nav">
-                    <ul id="menulist">
-                        <li><a th:href="@{/}">Home</a></li>
-                        <li><a th:href="@{/index.html(section=about_us)}">About</a></li>
-                        <li><a th:href="@{/index.html(section=contact_us)}">Contact</a></li>
-                        <li><a href="">Notice</a></li>
-                        <li><a th:href="@{/ghash.html}">GenerateHashtag</a></li>
-                        <li><a th:href="@{/login}">Login</a></li>
-                        <li><a href="" class="donate">Donate Now</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="mob_menu" onclick="toggleMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
-    </header>
-
-    <!-- Header Part Ends Here  -->
+    <!--  Header Section Ends Here -->
 
     <!-- Admin Page Starts Here  -->
 
@@ -87,7 +44,7 @@
                 <img th:src="@{/images/lm_logo.png}" alt="">
             </div>
             <div class="l_form box10">
-                <div class="ll"><img th:src="@{/src/images/l_logo.png}" alt=""></div>
+                <div class="ll"><img th:src="@{/images/l_logo.png}" alt=""></div>
                 <div class="btn_l">
                     <a th:href="@{/admin/login}"><button>Admin Login</button></a>  
                     <a th:href="@{/rescueagency/login}"><button>Rescue Agency Login</button></a>
@@ -99,47 +56,12 @@
 
     <!-- Admin Page Ends Here  -->
 
-    <!-- Footer Section Starts Here  -->
-    <footer class="footer full_width">
-        <div class="footer_container content_width">
-            <div class="logo box9">
-                <img th:src="@{/images/Logo_Main.png}" alt="">
-            </div>
-            <div class="text box9">
-                <h3>RakshaMitra <br>Instant Alerts, Immediate Action.</h3>
-            </div>
 
-            <div class="main_social box9">
-                <a href="" target="_blank" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i>
-                </a>
-                <a href="" target="_blank" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram" style="color: #c32aa3;"></i>
-                </a>
-                <a href="" target="_blank" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook" style="color: #1877f2;"></i>
-                </a>
-                <a href="" target="_blank" aria-label="YouTube">
-                    <i class="fa-brands fa-youtube" style="color: #ff0000;"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Section Starts Here  -->
+
+    <div th:replace="~{fragments/footer :: footerFragment}"></div>
 
     <!-- Footer Section Ends Here  -->
-
-    <!-- Footer1 Section Starts Here  -->
-    <footer class="footer1 full_width">
-        <div class="footer_container1 content_width">
-            <div class="text1 box10">
-                <h3>Designed and Developed by <a href="" target="_blank">RakshaMitra</a></h3>
-            </div>
-            <div class="text2 box10">
-                <h3>© 2024 RakshaMitra. All rights reserved.</h3>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer1 Section Ends Here  -->
 
     <script th:src="@{/js/res_nav.js}"></script>
     <script th:src="@{/js/smooth.js}"></script>
