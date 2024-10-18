@@ -5,7 +5,7 @@ let disasterTypes = [];
 // Fetch and load data from JSON files
 function fetchData() {
     // Load states and districts data
-    fetch('../res/json/data.json')
+    fetch('../json/data.json')
         .then(response => response.json())
         .then(jsonData => {
             data = jsonData;
@@ -14,7 +14,7 @@ function fetchData() {
         .catch(error => console.error('Error loading states data:', error));
 
     // Load disaster types data
-    fetch('../res/json/types.json')
+    fetch('../json/types.json')
         .then(response => response.json())
         .then(jsonData => {
             disasterTypes = jsonData.types;

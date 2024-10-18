@@ -2,6 +2,7 @@
 /* Header 1 Part Starts Here  */
 .header1 {
     background-color: #091d3e;
+   
 }
 
 .header1 .container {
@@ -37,10 +38,22 @@
 
 
 /* Header 2 Part Starts Here  */
-.header2{
-
+.header2 {
+    position: sticky;
+    top: 0;
     background-color: #efeeff;
+    transition: border 0.1s ease;
+    -webkit-transition: border 0.1s ease;
+    -moz-transition: border 0.1s ease;
+    -ms-transition: border 0.1s ease;
+    -o-transition: border 0.1s ease;
 }
+
+/* Define the border style in a new class */
+.scrolled {
+    border-bottom: 3px solid #b9b9f8; /* Example border style */
+}
+
 .header2 .container {
     display: flex;
     height: 80px;
@@ -58,7 +71,16 @@
     width: 60px;
 }
 
-.header2 .box1 {
+
+/* .header2 .box1 {
+    flex: 1;
+
+} */
+.header2 .menu {
+    flex: 2;
+
+}
+.header2 .logo {
     flex: 1;
 
 }
@@ -80,7 +102,6 @@
     color: #232323;
     font-size: 20px;
     margin: 0 12px;
-    text-transform: cap;
     font-weight: 700;
     opacity: 0.9;
     transition: all 0.4s ease;
@@ -103,6 +124,17 @@
     font-size: 25px;
     color: black;
     margin-right: 20px;
+}
+.header2 .nav ul li .donate{
+ background-color:#c8cacf ;
+ padding: 10px 25px;
+ border: none;
+ outline: none;
+ border-radius: 25px;
+ -webkit-border-radius: 25px;
+ -moz-border-radius: 25px;
+ -ms-border-radius: 25px;
+ -o-border-radius: 25px;
 }
 
 /* Header 2 Part Ends Here  */
@@ -210,7 +242,7 @@ max-width: 330px;
     .header2 .menu nav ul {
         position: absolute;
         top: 80px;
-        left: 30%;
+        left: 0;
         right: 0;
         flex-direction: column;
         text-align: center;
@@ -223,13 +255,20 @@ max-width: 330px;
         -o-border-radius: 15px;
     }
 
+    .header2 .nav ul li .donate{
+        background-color:transparent ;
+        padding: 0;
+      
+       }
+       
+
     .header2 .container .tat_logo {
         display: none;
     }
 
     nav ul li {
-        margin: 10px;
-        margin-bottom: 20px;
+        margin: 8px;
+        
     }
 
     #menulist {

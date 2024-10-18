@@ -26,7 +26,7 @@
 .main {
     width: 100%;
     height: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url('../src/images/Home_img.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url('../images/Home_img.jpg');
     background-size: 100% 100%;
     border: 5px solid #61ce70;
 }
