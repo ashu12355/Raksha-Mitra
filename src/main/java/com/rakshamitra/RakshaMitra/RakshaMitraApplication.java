@@ -8,5 +8,6 @@ public class RakshaMitraApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RakshaMitraApplication.class, args);
+		
 	}
 }
