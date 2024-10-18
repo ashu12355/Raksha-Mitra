@@ -20,9 +20,8 @@
 
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/header_footer.css">
-    <!-- <link rel="stylesheet" href="css/loader.css"> -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/headerfooter.css}">
 
 </head>
 
@@ -31,59 +30,10 @@
 
     <!-- Header Part Starts Here  -->
 
-    <header class="header1 full_width">
-        <div class="container content_width">
-            <p><span>RakshaMitra:</span> Instant Alerts, Immediate Action.</p>
-            <div class="header_social">
-                <a href="" target="_blank" aria-label="LinkedIn">
-                    <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
-                </a>
-                <a href="" target="_blank" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
-                </a>
-                <a href="" target="_blank" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
-                </a>
-                <a href="" target="_blank" aria-label="YouTube">
-                    <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
-                </a>
+    <div th:replace="~{fragments/header :: headerFragment}"></div>
 
-            </div>
-        </div>
-    </header>
-
-    <header class="header2 full_width">
-        <div class="container content_width">
-            <div class="logo box1">
-                <img src="../src/images/Logo_Main.png" alt="" class="bl_logo">
-            </div>
-
-            <div class="menu box1">
-                <nav class="nav ">
-                    <ul id="menulist">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../index.html?section=about_us">About</a></li>
-                        <li><a href="../index.html?section=contact_us">Contact</a></li>
-                        <li><a href="">Notice</a></li>
-                        <li><a href="ghash.html">GenerateHashtag</a>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="" class="donate">Donate Now</a></li>
-
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="mob_menu " onclick="toggleMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
-
-    </header>
-    </header>
 
     <!-- Header Part Ends Here  -->
-
-
 
 
     <!-- Report Disaster Section Starts Here  -->
@@ -95,7 +45,7 @@
         </div>
         <div class="reportd_container content_width">
             <div class="report box7">
-                <img src="../src/images/report_disaster.png" alt="">
+                <img th:src="@{/images/report_disaster.png}" alt="">
             </div>
             <div class="form box7">
                 <div class="container">
@@ -186,64 +136,21 @@
 
 
     <!-- Footer Section Starts Here  -->
-    <footer class="footer full_width">
-        <div class="footer_container content_width">
-            <div class="logo box9">
-                <img src="../src/images/Logo_Main.png" alt="">
-
-            </div>
-            <div class="text box9">
-                <h3>RakshaMitra <br>Instant Alerts, Immediate Action.</h3>
-            </div>
-
-            <div class="main_social box9">
-                <a href="" target="_blank" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i>
-                </a>
-                <a href="" target="_blank" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram" style="color: #c32aa3;"></i>
-                </a>
-                <a href="" target="_blank" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook" style="color: #1877f2;"></i>
-                </a>
-                <a href="" target="_blank" aria-label="YouTube">
-                    <i class="fa-brands fa-youtube" style="color: #ff0000;"></i>
-                </a>
-
-
-            </div>
-
-        </div>
-
-    </footer>
+    <div th:replace="~{fragments/footer :: footerFragment}"></div>
 
     <!-- Footer Section Ends Here  -->
 
 
-    <!-- Footer1 Section Starts Here  -->
-
-
-    <footer class="footer1 full_width">
-        <div class="footer_container1 content_width">
-            <div class="text1 box10">
-                <h3>Designed and Developed by <a href="" target="_blank">RakshaMitra</a>
-                </h3>
-            </div>
-            <div class="text2 box10">
-                <h3>© 2024 RakshaMitra. All rights reserved.</h3>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer1 Section Ends Here  -->
 
 
 
 
 
 
-    <script src="../js/res_nav.js"></script>
 
-    <script src="../js/smooth.js"></script>
+    <script src="/js/res_nav.js"></script>
+
+    <script src="/js/smooth.js"></script>
 
 
 

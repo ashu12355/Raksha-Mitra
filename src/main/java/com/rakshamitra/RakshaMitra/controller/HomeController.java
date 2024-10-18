@@ -22,4 +22,8 @@ public class HomeController {
     public String showGhashPage() {
         return "ghash"; // This maps to ghash.html in templates
     }
+    @GetMapping("/reportDisaster")
+    public String showReportDisaster() {
+        return "reportD";
+    }
 }
