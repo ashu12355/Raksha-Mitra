@@ -1,7 +1,6 @@
 package com.rakshamitra.RakshaMitra.model;
 
 import java.time.LocalDate;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -26,6 +25,8 @@ public class Volunteer {
     private String password;
     private boolean availability;
     private String description;
+    private boolean isApproved = false;
+
     public Long getId() {
         return id;
     }
@@ -98,7 +99,13 @@ public class Volunteer {
     public void setDescription(String description) {
         this.description = description;
     }
+    public boolean isApproved() {
+        return isApproved;
+    }
+    public void setApproved(boolean isApproved) {
+        this.isApproved = isApproved;
+    }
 
-    
+ 
     
 }
