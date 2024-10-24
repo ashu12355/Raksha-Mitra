@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <!-- Essential Meta Tags -->
@@ -46,10 +46,22 @@
 
             <div class="rescue_reg_form box14">
 
-                <form action="/rescueagency/register" method="post">
+                <form data-th-action="@{/rescueagency/register}"
+                 method="post" 
+                 th:object="${rescueAgencyForm}"
+                 novalidate>
                     <div class="rescue_innerform">
                         <label for="">Agency Name</label>
-                        <input type="text" name="agencyName" placeholder="Enter Your Agency Name*" required>
+                        <input 
+                        type="text" 
+                        name="agencyName"
+                        id="agencyName"
+                        th-field="*{agencyName}"
+                        placeholder="Enter Your Agency Name*"/>
+                        <p 
+                        th-if="${#fields.hasErrors('agencyName')}" 
+                        th-errors="*{agencyName}" 
+                        style="color: red; "></p>
                 
                         <label for="">Contact Person Name</label>
                         <input type="text" name="contactPersonName" placeholder="Enter the Contact Person Name*" required>
