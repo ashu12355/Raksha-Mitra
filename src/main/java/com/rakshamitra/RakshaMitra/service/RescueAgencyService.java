@@ -19,8 +19,9 @@ public class RescueAgencyService {
     }
 
     public RescueAgency saveAgency(RescueAgency agency) {
+        // Check if an agency with the same email already exists
         if (rescueAgencyRepository.findByEmail(agency.getEmail()) != null) {
-            throw new IllegalArgumentException("Email already in use");
+            return null;
         }
         return rescueAgencyRepository.save(agency);
     }
@@ -35,7 +36,4 @@ public class RescueAgencyService {
     public List<RescueAgency> findAllPendingAgencies() {
         return rescueAgencyRepository.findByApproved(false);
     }
-
-    
-    
 }

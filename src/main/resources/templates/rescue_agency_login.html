@@ -52,6 +52,9 @@
                     <img th:src="@{/images/l_logo.png}" alt="">
                 </div>
 
+                <p th:if="${message}" style="color: green;">[[${message.content}]]</p>
+
+
                 <form method="post" action="/rescueagency/login">
                     <label for="">Enter Your Email</label>
                     <input type="email" id="email" name="email" placeholder="Email*" required autocomplete="off"> <br>

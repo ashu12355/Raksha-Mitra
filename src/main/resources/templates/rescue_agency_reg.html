@@ -46,41 +46,90 @@
 
             <div class="rescue_reg_form box14">
 
-                <form data-th-action="@{/rescueagency/register}"
+                <form 
+                 data-th-action="@{/rescueagency/register}"
                  method="post" 
                  th:object="${rescueAgencyForm}"
                  novalidate>
                     <div class="rescue_innerform">
                         <label for="">Agency Name</label>
+
+
                         <input 
                         type="text" 
                         name="agencyName"
                         id="agencyName"
-                        th-field="*{agencyName}"
+                        th:field="*{agencyName}"
                         placeholder="Enter Your Agency Name*"/>
                         <p 
-                        th-if="${#fields.hasErrors('agencyName')}" 
-                        th-errors="*{agencyName}" 
-                        style="color: red; "></p>
-                
+                        data-th-if="${#fields.hasErrors('agencyName')}" 
+                        data-th-errors="*{agencyName}" 
+                        style="color: red; ">
+                        </p>
+
                         <label for="">Contact Person Name</label>
-                        <input type="text" name="contactPersonName" placeholder="Enter the Contact Person Name*" required>
+                        <input type="text"
+                         name="contactPersonName"
+                         id="contactPersonName"
+                         th:field="*{contactPersonName}"
+                          placeholder="Enter the Contact Person Name*" >
+                          <p 
+                        data-th-if="${#fields.hasErrors('agencyName')}" 
+                        data-th-errors="*{contactPersonName}" 
+                        style="color: red; ">
+                        </p>
                 
                         <label for="">Contact Number</label>
-                        <input type="text" name="contactNumber" placeholder="Enter Contact Number*" required>
+                        <input type="text"
+                        name="contactNumber"
+                        id="contactNumber"
+                        th:field="*{contactNumber}"
+                        placeholder="Enter Contact Number*" >
+                        <p 
+                        data-th-if="${#fields.hasErrors('contactNumber')}" 
+                        data-th-errors="*{contactNumber}" 
+                        style="color: red; ">
+                        </p>
                 
                         <label for="">Email Address</label>
-                        <input type="email" name="email" placeholder="Enter Email Address*" required>
+                        <input type="email"
+                         name="email"
+                         id="email"
+                         th:field="*{email}"
+                        placeholder="Enter Email Address*" >
+
+                        <p 
+                        data-th-if="${#fields.hasErrors('email')}" 
+                        data-th-errors="*{email}" 
+                        style="color: red; ">
+                        </p>
                 
                         <label for="">Agency Location</label>
-                        <input type="text" name="agencyLocation" placeholder="Enter The Agency Location*" required>
-                        <input type="text" name="latitude" placeholder="Enter The Agency Latitude*" required>
-                        <input type="text" name="longitude" placeholder="Enter The Agency Longitude*" required>
+                        <input type="text" name="agencyLocation"
+                         id="agencyLocation"  th:field="*{agencyLocation}" 
+                         placeholder="Enter The Agency Location*"  required>
+                        <p 
+                        data-th-if="${#fields.hasErrors('agencyName')}" 
+                        data-th-errors="*{agencyLocation}" 
+                        style="color: red; ">
+                        </p>
+                        <input type="text" name="latitude" id="latitude"  th:field="*{latitude}" placeholder="Enter The Agency Latitude*" required>
+                        <p 
+                        data-th-if="${#fields.hasErrors('agencyName')}" 
+                        data-th-errors="*{latitude}" 
+                        style="color: red; ">
+                        </p>
+                        <input type="text" name="longitude" id="longitude"  th:field="*{longitude}" placeholder="Enter The Agency Longitude*" required>
+                        <p 
+                        data-th-if="${#fields.hasErrors('agencyName')}" 
+                        data-th-errors="*{longitude}" 
+                        style="color: red; ">
+                        </p>
                     </div>
                 
                     <div class="rescue_innerform">
                         <label for="">Specialization</label>
-                        <select name="specialization" required>
+                        <select name="specialization" id="specialization" th:field="*{specialization}" required>
                             <option value="">Select Specialization*</option>
                             <option value="Search and Rescue">Search and Rescue</option>
                             <option value="Medical Aid">Medical Aid</option>
@@ -88,33 +137,69 @@
                             <option value="Logistics">Logistics</option>
                             <option value="Others">Others</option>
                         </select>
+                        <p 
+                        data-th-if="${#fields.hasErrors('agencyName')}" 
+                        data-th-errors="*{specialization}" 
+                        style="color: red; ">
+                        </p>
                 
                         <label for="">Team Size</label>
-                        <input type="number" name="teamSize" placeholder="Enter The Team Size*" required>
+                        <input type="number" name="teamSize" id="teamSize" th:field="*{teamSize}" placeholder="Enter The Team Size*" required>
+                        <p 
+                        data-th-if="${#fields.hasErrors('agencyName')}" 
+                        data-th-errors="*{teamSize}" 
+                        style="color: red; ">
+                        </p>
                 
                         <label for="">Availability</label>
-                        <select name="availability" required>
+                        <select name="availability" id="availability" th:field="*{availability}" required>
                             <option value="">Select Availability*</option>
                             <option value="Yes">Yes</option>
                             <option value="Already Assigned">Already Assigned</option>
                         </select>
+                        <p 
+                        data-th-if="${#fields.hasErrors('agencyName')}" 
+                        data-th-errors="*{availability}" 
+                        style="color: red; ">
+                        </p>
                 
                         <label for="">Password</label>
-                        <input type="password" name="password" placeholder="Create A Password*" required>
+                        <input type="password" name="password" id="password" th:field="*{password}" placeholder="Create A Password*" required>
+                        <p 
+                        data-th-if="${#fields.hasErrors('agencyName')}" 
+                        data-th-errors="*{password}" 
+                        style="color: red; ">
+                        </p>
                 
                         <label for="">Confirm Password</label>
-                        <input type="password" name="confirmPassword" placeholder="Re-Enter The Password*" required>
+                        <input type="password" name="confirmPassword" id="confirmPassword" th:field="*{confirmPassword}" placeholder="Re-Enter The Password*" required>
+                        <p 
+                        data-th-if="${#fields.hasErrors('agencyName')}" 
+                        data-th-errors="*{confirmPassword}" 
+                        style="color: red; ">
+                        </p>
                     </div>
                 
                     <div class="rescue_innerform">
                         <label for="">Description</label>
-                        <textarea name="description" rows="10" placeholder="Additional information or special requirements and Past Experience*"></textarea>
+                        <textarea name="description" th:field="*{description}" id="description" rows="10" placeholder="Additional information or special requirements and Past Experience*"></textarea>
+                        <p 
+                        data-th-if="${#fields.hasErrors('agencyName')}" 
+                        data-th-errors="*{description}" 
+                        style="color: red; ">
+                        </p>
                 
                         <input type="submit" class="btn">
                         <input type="reset" class="btn">
-                    </div>
+                    
                 </form>
-                
+                <!-- message -->
+             <div data-th-replace="~{message::messagebox}">
+            </div>
+               
+            </div>
+
+            
             </div> 
         </div>
     </section>
